@@ -1,0 +1,29 @@
+==
+<div class="confirm-container">
+    <!--This will contain the confirmation when the email is successfully sent-->
+</div>
+<form class="flexiContactForm pure-form pure-form-stacked" role="form"
+      data-request="{{ __SELF__ }}::onMailSent"
+      data-request-update="'{{ __SELF__ }}::confirm': '.confirm-container'">
+
+        <fieldset>
+            
+            <legend><h2>Contact Me!</h2></legend>
+            
+            <label for="name">Name</label>
+            <input type="text" class="form-control" value=""  name="name" placeholder="Enter name">
+    
+            <label for="email">Email</label>
+            <input type="text" class="form-control" value="" name="email" placeholder="Enter Email">
+    
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control" value="" name="subject" placeholder="Enter Subject">
+            
+            <label for="message">Message</label>
+            <textarea class="form-control" value="" name="body" placeholder="Enter Message" cols="30" rows="10"></textarea>
+
+    
+            <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        </fieldset>
+    </div>
+</form>

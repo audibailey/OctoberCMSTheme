@@ -1,0 +1,26 @@
+description = "blogPost"
+
+[disqus]
+==
+{% set post = __SELF__.post %}
+<div class="de-image">
+{% if post.featured_images.count %}
+		{% for image in post.featured_images %}
+				<img
+					data-src="{{ image.filename }}"
+					src="{{ image.path }}"
+					alt="{{ image.description }}"
+					 />
+		{% endfor %}
+	{% endif %}
+</div>
+
+<div class="single-post"> 
+	<h2> {{ post.title }} </h2>
+	<p class="info">
+		Posted on {{ post.published_at|date('M d, Y') }}
+	</p>
+
+	<div class="">{{ post.content_html|raw }}</div>
+	<div class="comments">{% component 'disqus'%}</div>
+</div>
