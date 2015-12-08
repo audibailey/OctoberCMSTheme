@@ -1,4 +1,4 @@
-# desgyz.tk-Website-Theme-October-CMS
+# OctoberCMSTheme
 The October CMS theme I made for my website (desgyz.tk)
 
 The style sheet used is from PureCSS.io and Font-Awesome.
